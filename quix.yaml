@@ -73,12 +73,12 @@ deployments:
         inputType: Secret
         description: ''
         required: true
-        value: GoogleMapsApiKey
+        secretKey: GoogleMapsApiKey
       - name: bearerToken
         inputType: Secret
         description: ''
         required: true
-        value: bearerToken
+        secretKey: bearerToken
   - name: Frame Grabber
     application: TfL traffic camera frame grabber
     deploymentType: Service
@@ -290,7 +290,7 @@ deployments:
         inputType: Secret
         description: Your TfL API key
         required: false
-        value: tfl_api_key
+        secretKey: TFL_API_KEY
       - name: sleep_interval
         inputType: FreeText
         description: ''
