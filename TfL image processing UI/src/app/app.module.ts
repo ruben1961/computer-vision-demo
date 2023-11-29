@@ -22,7 +22,7 @@ import { AppInitService } from './services/app-init.service';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    AgmCoreModule.forRoot({ apiKey: '' }),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw' }),
     AgmMarkerClustererModule,
     AgmSnazzyInfoWindowModule
   ],
