@@ -8,8 +8,9 @@ variables:
     required: true
   - name: tfl_api_key
     inputType: Secret
-    description: 'Your TfL API key'
-    defaultValue: tfl_api_key
+    description: Your TfL API key
+    defaultValue: TFL_API_KEY
+    required: false
   - name: sleep_interval
     inputType: FreeText
     description: ''
@@ -17,7 +18,7 @@ variables:
     required: true
   - name: fence_coordinates
     inputType: FreeText
-    description: 'Geofence coordinates. e.g. [(LAT1,LON1),(LAT2,LON2),(LAT3,LON3)]'
+    description: Geofence coordinates. e.g. [(LAT1,LON1),(LAT2,LON2),(LAT3,LON3)]
     defaultValue: ''
     required: false
 dockerfile: build/dockerfile
