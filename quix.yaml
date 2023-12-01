@@ -69,16 +69,11 @@ deployments:
         description: The topic to read from
         required: true
         value: image-processed-merged
-      - name: GoogleMapsApiKey
-        inputType: FreeText
-        description: ''
-        required: true
-        value: ''
       - name: bearerToken
         inputType: Secret
         description: ''
         required: true
-        secretKey: bearerToken
+        secretKey: TFL_API_KEY
   - name: Frame Grabber
     application: TfL traffic camera frame grabber
     deploymentType: Service
