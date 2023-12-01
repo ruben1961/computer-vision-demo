@@ -54,7 +54,7 @@ deployments:
   - name: Project Front End
     application: TfL image processing UI
     deploymentType: Service
-    version: 5d2fef0d271204b7ef43772806fc1add683547a6
+    version: v1.1
     resources:
       cpu: 500
       memory: 200
@@ -69,11 +69,6 @@ deployments:
         description: The topic to read from
         required: true
         value: image-processed-merged
-      - name: bearerToken
-        inputType: Secret
-        description: ''
-        required: true
-        secretKey: TFL_API_KEY
   - name: Frame Grabber
     application: TfL traffic camera frame grabber
     deploymentType: Service
