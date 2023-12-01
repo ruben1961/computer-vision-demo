@@ -296,6 +296,31 @@ deployments:
         description: Geofence coordinates. e.g. [(LAT1,LON1),(LAT2,LON2),(LAT3,LON3)]
         required: false
         value: ''
+  - name: Computer vision object detection
+    application: Computer vision object detection
+    deploymentType: Service
+    version: baf9f6d196cbade0c9635ce18b185adcbd0f4c0b
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    desiredStatus: Running
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: This is the input topic for raw images
+        required: true
+        value: image-raw
+      - name: output
+        inputType: OutputTopic
+        description: This is the output for images augmented with the recognized objects
+        required: true
+        value: image-processed
+      - name: yolo_model
+        inputType: FreeText
+        description: ''
+        required: false
+        value: yolov8n.pt
 
 # This section describes the Topics of the data pipeline
 topics:
