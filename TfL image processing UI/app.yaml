@@ -9,7 +9,7 @@ variables:
   - name: bearerToken
     inputType: Secret
     description: ''
-    defaultValue: bearerToken
+    defaultValue: PAT
     required: false
 dockerfile: src/build/dockerfile
 defaultFile: src/app/services/quix.service.ts
