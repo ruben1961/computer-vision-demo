@@ -298,29 +298,6 @@ deployments:
         description: ''
         required: false
         value: yolov8n.pt
-  - name: Project Front End 2
-    application: TfL image processing UI
-    deploymentType: Service
-    version: 7622103b3ea65bdd266e288284ef0e403ae5359c
-    resources:
-      cpu: 500
-      memory: 200
-      replicas: 1
-    publicAccess:
-      enabled: true
-      urlPrefix: app
-    desiredStatus: Stopped
-    variables:
-      - name: processed
-        inputType: InputTopic
-        description: The topic to read from
-        required: true
-        value: image-processed-merged
-      - name: bearerToken
-        inputType: Secret
-        description: ''
-        required: false
-        secretKey: PAT
   - name: Project Front End
     application: TfL image processing UI
     deploymentType: Service
