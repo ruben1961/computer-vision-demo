@@ -16,7 +16,6 @@ export class AppInitService {
 
     if (workingLocally || location.hostname === "localhost" || location.hostname === "127.0.0.1") {
       googleMapsConfig.apiKey = googleMapsApiKey;
-      console('por aqui 1')
       return;
     }
 
@@ -37,7 +36,6 @@ export class AppInitService {
       else{
         // else blank the api key so users will see "developer mode" instead of no map at all.
         googleMapsConfig.apiKey = ''; // if you want to use your own Google Maps API key, insert it here.
-        console('por aqui 2')
       }
     } catch (e) {
       console.error(e);
