@@ -1,3 +1,0 @@
-quixstreams==0.5.6
-requests
-shapely
