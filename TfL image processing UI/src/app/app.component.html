@@ -6,7 +6,7 @@
           <a routerLink="/lobby" routerLinkActive="active" class="logo">
             <img src="assets/quix-logo.svg" alt="Quix" height="32" />
           </a>
-          <span [style.fontSize.px]="18" class="ms-2 mt-2">PROYECTO COMPUTER VISION</span>
+          <span [style.fontSize.px]="18" class="ms-2 mt-2">TEMPLATES</span>
         </div>
         <div fxLayout="row" fxHide.xs>
           <a mat-raised-button color="primary" class="small me-2" fxLayout="row" fxLayoutAlign="center center"
@@ -18,7 +18,7 @@
           <a mat-raised-button color="accent" class="small" fxLayout="row" fxLayoutAlign="center center"
             href="https://github.com/quixio/computer-vision-demo" target="_blank">
             <img src="assets/github.svg" alt="Quix" height="16" class="me-2" />
-            <span>Ver repositorio</span>
+            <span>View repo</span>
           </a>
         </div>
       </mat-toolbar>
@@ -28,7 +28,7 @@
       <div fxLayout="column" fxFlex.gt-xs="50" fxFlex.gt-sm="480px" class="overflow-auto p-5 mat-elevation-z4">
         <div class="mb-5">
           <h1 class="mb-1">Computer vision</h1>
-          <p class="mb-3 text-body text-uppercase">Project Traffic from London</p>
+          <p class="mb-3 text-body text-uppercase">Project template</p>
           <p class="mat-body">Uses object detection to visualize London's traffic density in real time.</p>
           <div fxLayout="row">
             <a mat-raised-button color="primary" class="small me-2" fxLayout="row" fxLayoutAlign="center center"
@@ -46,18 +46,27 @@
         </div>
 
         <div class="mb-5">
-          <h4 class="mb-2">Se alimenta de datos desde las cámaras de tráfico de Londres</h4>
+          <p>Built with Quix and Confluent</p>
+          <div fxLayout="row" fxFlexAlign="start center">
+            <img src="assets/quix-logo-black.svg" alt="Quix" height="25" />
+            <mat-divider [vertical]="true" class="mx-3 border-dark"></mat-divider>
+            <img src="assets/confluent.svg" alt="Confluent" height="25" />
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h4 class="mb-2">Live data from London's traffic cameras</h4>
           <p class="text-body mb-3">
-            Cada 20 segundos, este proyecto <a
+            Every 20 seconds, this project <a
               [href]="'https://portal.platform.quix.ai/pipeline/deployments/' + uiProjectDeploymentId + '?workspace=' + deepLinkWorkspaceId + '&token=' + ungatedToken"
-              target="_blank">ingesta video frames</a> from Transport for London (TfL) traffic cameras and
+              target="_blank">ingests video frames</a> from Transport for London (TfL) traffic cameras and
             detects the vehicles in each frame. Vehicle detection is powered by the <a
               [href]="'https://portal.platform.quix.ai/pipeline/deployments/' + computerVisionProjectDeploymentId + '?workspace=' + deepLinkWorkspaceId + '&token=' + ungatedToken"
               target="_blank">YOLO v8 ML model</a>.
-            Para preservar los recursos, solo se extrae 1 de cada 100 fotogramas para su procesamiento. Estos son los últimos (pruebe
-             haciendo clic en uno):
-          <p class="text-body mb-3">Para preservar los recursos, solo se extrae 1 de cada 100 fotogramas para su procesamiento. Estos son los últimos (pruebe
-             haciendo clic en uno):</p>
+            To preserve resources only 1 every 100 frames is extracted for processing. These are the latest (try
+            clicking on one):
+          <p class="text-body mb-3">To preserve resources only 1 every 100 frames is extracted for processing. These are
+            the latest (try clicking on one):</p>
           <div fxLayout="row" fxLayoutGap="2">
             <ng-container *ngFor="let m of lastMarkers">
               <ng-container *ngIf="m">
