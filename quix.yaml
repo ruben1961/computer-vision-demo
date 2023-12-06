@@ -29,36 +29,6 @@ deployments:
         description: ''
         required: false
         value: max-vehicles
-  - name: Data Buffer
-    application: Data Buffer
-    deploymentType: Service
-    version: f65c0aba9bb38288051bb7a7cdc46d253b819847
-    resources:
-      cpu: 500
-      memory: 200
-      replicas: 1
-    desiredStatus: Running
-    variables:
-      - name: max_vehicles
-        inputType: InputTopic
-        description: ''
-        required: false
-        value: max-vehicles
-      - name: processed_images
-        inputType: InputTopic
-        description: ''
-        required: false
-        value: image-processed
-      - name: vehicle_counts
-        inputType: InputTopic
-        description: ''
-        required: false
-        value: image-vehicles
-      - name: buffered_stream
-        inputType: OutputTopic
-        description: ''
-        required: false
-        value: buffered-data
   - name: Data API
     application: Data API
     deploymentType: Service
