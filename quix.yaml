@@ -5,28 +5,7 @@ metadata:
   version: 1.0
 
 # This section describes the Deployments of the data pipeline
-deployments:
-  - name: Data API
-    application: Data API
-    deploymentType: Service
-    version: 6e4ba5b9db470bd90991083ee5db84c0e85c1252
-    resources:
-      cpu: 200
-      memory: 1000
-      replicas: 1
-    publicAccess:
-      enabled: true
-      urlPrefix: data-api
-    state:
-      enabled: true
-      size: 2
-    desiredStatus: Running
-    variables:
-      - name: buffered_stream
-        inputType: InputTopic
-        description: The output from the Image Processing stage
-        required: false
-        value: buffered-data
+deployments: []
 
 # This section describes the Topics of the data pipeline
 topics:
