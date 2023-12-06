@@ -6,31 +6,6 @@ metadata:
 
 # This section describes the Deployments of the data pipeline
 deployments:
-  - name: Object Detection
-    application: Computer vision object detection
-    deploymentType: Service
-    version: baf9f6d196cbade0c9635ce18b185adcbd0f4c0b
-    resources:
-      cpu: 500
-      memory: 1000
-      replicas: 1
-    desiredStatus: Running
-    variables:
-      - name: input
-        inputType: InputTopic
-        description: This is the input topic for raw images
-        required: true
-        value: image-raw
-      - name: output
-        inputType: OutputTopic
-        description: This is the output for images augmented with the recognized objects
-        required: true
-        value: image-processed
-      - name: yolo_model
-        inputType: FreeText
-        description: ''
-        required: false
-        value: yolov8n.pt
   - name: Stream merge
     application: Stream merge
     deploymentType: Service
