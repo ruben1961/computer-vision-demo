@@ -6,29 +6,6 @@ metadata:
 
 # This section describes the Deployments of the data pipeline
 deployments:
-  - name: Max Vehicle Window
-    application: Max Vehicles
-    deploymentType: Service
-    version: 595b8500e9b572abf15a35f80180cb60e71521c4
-    resources:
-      cpu: 500
-      memory: 200
-      replicas: 1
-    state:
-      enabled: true
-      size: 1
-    desiredStatus: Running
-    variables:
-      - name: input
-        inputType: InputTopic
-        description: ''
-        required: false
-        value: image-vehicles
-      - name: output
-        inputType: OutputTopic
-        description: ''
-        required: false
-        value: max-vehicles
   - name: Data API
     application: Data API
     deploymentType: Service
