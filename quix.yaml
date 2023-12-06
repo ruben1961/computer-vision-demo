@@ -298,14 +298,17 @@ deployments:
         description: ''
         required: false
         value: yolov8n.pt
-  - name: TfL image processing UI 2
+  - name: Project Front End 2
     application: TfL image processing UI
     deploymentType: Service
-    version: 13c4cac6503d29f9b74bec62ff5cc1c65ab13ed1
+    version: 7622103b3ea65bdd266e288284ef0e403ae5359c
     resources:
-      cpu: 200
-      memory: 500
+      cpu: 500
+      memory: 200
       replicas: 1
+    publicAccess:
+      enabled: true
+      urlPrefix: app
     desiredStatus: Running
     variables:
       - name: processed
@@ -318,17 +321,14 @@ deployments:
         description: ''
         required: false
         secretKey: PAT
-  - name: Project Front End 2
+  - name: Project Front End
     application: TfL image processing UI
     deploymentType: Service
-    version: 7622103b3ea65bdd266e288284ef0e403ae5359c
+    version: 13c4cac6503d29f9b74bec62ff5cc1c65ab13ed1
     resources:
-      cpu: 500
-      memory: 200
+      cpu: 200
+      memory: 500
       replicas: 1
-    publicAccess:
-      enabled: true
-      urlPrefix: app
     desiredStatus: Running
     variables:
       - name: processed
